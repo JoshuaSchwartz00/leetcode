@@ -37,19 +37,9 @@ public:
         }
         
         if(list1 == nullptr){
-            while(list2 != nullptr){
-                ListNode* newNode = new ListNode(list2->val);
-                end->next = newNode;
-                list2 = list2->next;
-                end = end->next;
-            }
+            end->next = list2;
         }else if(list2 == nullptr){
-            while(list1 != nullptr){
-                ListNode* newNode = new ListNode(list1->val);
-                end->next = newNode;
-                list1 = list1->next;
-                end = end->next;
-            }
+            end->next = list1;
         }
         
         return answer->next;

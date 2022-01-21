@@ -31,19 +31,9 @@ public:
         }
         
         if(temp1 == nullptr){
-            while(temp2 != nullptr){
-                ListNode* newNode = new ListNode(temp2->val);
-                end->next = newNode;
-                temp2 = temp2->next;
-                end = end->next;
-            }
+            end->next = temp2;
         }else if(temp2 == nullptr){
-            while(temp1 != nullptr){
-                ListNode* newNode = new ListNode(temp1->val);
-                end->next = newNode;
-                temp1 = temp1->next;
-                end = end->next;
-            }
+            end->next = temp1;
         }
         
         return newList->next;
